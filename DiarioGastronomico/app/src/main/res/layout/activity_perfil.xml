@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    tools:context=".PerfilActivity">
+
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:clipToPadding="false">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingBottom="20dp">
+
+            <!-- Hero perfil -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center" android:background="@drawable/bg_hero_gradient" android:paddingTop="36dp" android:paddingBottom="30dp" android:paddingHorizontal="20dp">
+                <FrameLayout android:layout_width="92dp" android:layout_height="92dp">
+                    <ImageView android:layout_width="92dp" android:layout_height="92dp" android:src="@drawable/ph_avatar"/>
+                </FrameLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="Uniftec" android:textColor="@color/white" android:textStyle="bold" android:textSize="22sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="uniftec@email.com" android:textColor="#EBFFFFFF" android:textSize="14sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:background="@drawable/bg_pill_white" android:paddingHorizontal="14dp" android:paddingVertical="5dp" android:text="Consumidor" android:textColor="@color/brand_primary" android:textStyle="bold" android:textSize="12sp"/>
+            </LinearLayout>
+
+            <!-- Stats -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginHorizontal="20dp" android:layout_marginTop="-24dp" android:background="@drawable/bg_search" android:paddingVertical="16dp" android:baselineAligned="false">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="27" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="20sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Avaliações" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+                </LinearLayout>
+                <View android:layout_width="1dp" android:layout_height="34dp" android:layout_gravity="center_vertical" android:background="@color/outline"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="20sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Favoritos" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+                </LinearLayout>
+                <View android:layout_width="1dp" android:layout_height="34dp" android:layout_gravity="center_vertical" android:background="@color/outline"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="14" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="20sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lugares" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnEditarPerfil" style="@style/Widget.Diario.Button.Outlined" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="20dp" android:layout_marginTop="16dp" android:text="Editar perfil" app:icon="@drawable/ic_edit" app:iconGravity="textStart"/>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginHorizontal="20dp" android:layout_marginTop="18dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="14dp" android:paddingHorizontal="14dp" android:clickable="true" android:focusable="true" android:background="?attr/selectableItemBackground">
+                    <ImageView android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/bg_circle_soft" android:padding="10dp" android:src="@drawable/ic_star" app:tint="@color/brand_primary"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="14dp" android:text="Minhas avaliações" android:textColor="@color/text_primary" android:textSize="15sp" android:textStyle="bold"/>
+                    <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/ic_chevron_right" app:tint="@color/text_secondary"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="14dp" android:paddingHorizontal="14dp" android:clickable="true" android:focusable="true" android:background="?attr/selectableItemBackground">
+                    <ImageView android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/bg_circle_soft" android:padding="10dp" android:src="@drawable/ic_favorite" app:tint="@color/brand_primary"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="14dp" android:text="Favoritos" android:textColor="@color/text_primary" android:textSize="15sp" android:textStyle="bold"/>
+                    <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/ic_chevron_right" app:tint="@color/text_secondary"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="14dp" android:paddingHorizontal="14dp" android:clickable="true" android:focusable="true" android:background="?attr/selectableItemBackground">
+                    <ImageView android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/bg_circle_soft" android:padding="10dp" android:src="@drawable/ic_calendar" app:tint="@color/brand_primary"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="14dp" android:text="Notificações" android:textColor="@color/text_primary" android:textSize="15sp" android:textStyle="bold"/>
+                    <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/ic_chevron_right" app:tint="@color/text_secondary"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="14dp" android:paddingHorizontal="14dp" android:clickable="true" android:focusable="true" android:background="?attr/selectableItemBackground">
+                    <ImageView android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/bg_circle_soft" android:padding="10dp" android:src="@drawable/ic_tune" app:tint="@color/brand_primary"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="14dp" android:text="Configurações" android:textColor="@color/text_primary" android:textSize="15sp" android:textStyle="bold"/>
+                    <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/ic_chevron_right" app:tint="@color/text_secondary"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="14dp" android:paddingHorizontal="14dp" android:clickable="true" android:focusable="true" android:background="?attr/selectableItemBackground">
+                    <ImageView android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/bg_circle_soft" android:padding="10dp" android:src="@drawable/ic_logout" app:tint="@color/danger"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="14dp" android:text="Sair" android:textColor="@color/danger" android:textSize="15sp" android:textStyle="bold"/>
+                    <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/ic_chevron_right" app:tint="@color/text_secondary"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/surface"
+        app:elevation="8dp"
+        app:menu="@menu/menu_consumidor"
+        app:labelVisibilityMode="labeled"
+        app:itemActiveIndicatorStyle="@style/BottomNavIndicator"
+        app:itemIconTint="@color/nav_item_color"
+        app:itemTextColor="@color/nav_item_color"/>
+</LinearLayout>
