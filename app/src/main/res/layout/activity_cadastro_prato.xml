@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    tools:context=".CadastroPratoActivity">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingHorizontal="16dp" android:paddingVertical="14dp">
+        <ImageView android:id="@+id/btnVoltar" android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/bg_circle_soft" android:padding="9dp" android:src="@drawable/ic_arrow_back" app:tint="@color/text_primary" android:contentDescription="Voltar"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="12dp" android:text="Cadastrar prato" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="20sp"/>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:clipToPadding="false">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingHorizontal="20dp" android:paddingBottom="20dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fotos do prato" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="10dp">
+                <LinearLayout android:layout_width="92dp" android:layout_height="92dp" android:orientation="vertical" android:gravity="center" android:background="@drawable/bg_photo_dashed">
+                    <ImageView android:layout_width="26dp" android:layout_height="26dp" android:src="@drawable/ic_add_photo" app:tint="@color/brand_primary"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Adicionar" android:textColor="@color/brand_primary" android:textSize="12sp"/>
+                </LinearLayout>
+                <com.google.android.material.card.MaterialCardView android:layout_width="92dp" android:layout_height="92dp" android:layout_marginStart="10dp" app:cardCornerRadius="16dp" app:cardElevation="0dp"><ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:src="@drawable/ph_food_1"/></com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/Widget.Diario.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:hint="Nome do prato" app:startIconDrawable="@drawable/ic_restaurant" app:startIconTint="@color/text_secondary">
+                <com.google.android.material.textfield.TextInputEditText android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Nhoque ao Sugo"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/Widget.Diario.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:hint="Descrição">
+                <com.google.android.material.textfield.TextInputEditText android:layout_width="match_parent" android:layout_height="100dp" android:gravity="top|start" android:inputType="textMultiLine" android:padding="6dp" android:text="Nhoque de batata artesanal com molho de tomate italiano e manjericão fresco."/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="14dp" android:baselineAligned="false">
+                <com.google.android.material.textfield.TextInputLayout style="@style/Widget.Diario.Input" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="6dp" android:hint="Preço" app:startIconDrawable="@drawable/ic_money" app:startIconTint="@color/text_secondary" app:prefixText="R$ ">
+                    <com.google.android.material.textfield.TextInputEditText android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="numberDecimal" android:text="42,90"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/Widget.Diario.Input" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="6dp" android:hint="Categoria" app:startIconDrawable="@drawable/ic_category" app:startIconTint="@color/text_secondary">
+                    <com.google.android.material.textfield.TextInputEditText android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Massas"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView style="@style/Widget.Diario.Card" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Disponível" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="15sp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Exibir este prato no cardápio" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+                    </LinearLayout>
+                    <com.google.android.material.switchmaterial.SwitchMaterial android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" app:thumbTint="@color/white" app:trackTint="@color/brand_primary"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@color/surface" android:paddingHorizontal="20dp" android:paddingVertical="12dp" android:elevation="10dp">
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnSalvarPrato" style="@style/Widget.Diario.Button" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Salvar prato" app:icon="@drawable/ic_check_circle" app:iconGravity="textStart"/>
+    </LinearLayout>
+</LinearLayout>

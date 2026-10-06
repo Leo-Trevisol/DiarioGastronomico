@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    tools:context=".AvaliarActivity">
+
+    <!-- Top bar -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingHorizontal="16dp" android:paddingVertical="14dp">
+        <ImageView android:id="@+id/btnVoltar" android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/bg_circle_soft" android:padding="9dp" android:src="@drawable/ic_arrow_back" app:tint="@color/text_primary" android:contentDescription="Voltar"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="12dp" android:text="Nova avaliação" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="20sp"/>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:clipToPadding="false">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingHorizontal="20dp" android:paddingBottom="20dp">
+
+            <!-- Alvo -->
+            <com.google.android.material.card.MaterialCardView style="@style/Widget.Diario.Card" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="12dp" android:gravity="center_vertical">
+                    <com.google.android.material.card.MaterialCardView android:layout_width="60dp" android:layout_height="60dp" app:cardCornerRadius="12dp" app:cardElevation="0dp"><ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:src="@drawable/ph_cover_1"/></com.google.android.material.card.MaterialCardView>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cantina della Nonna" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Comida Italiana · Centro" android:textColor="@color/text_secondary" android:textSize="13sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Tipo -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:text="O que você está avaliando?" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
+            <com.google.android.material.button.MaterialButtonToggleGroup android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" app:singleSelection="true" app:selectionRequired="true">
+                <com.google.android.material.button.MaterialButton android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" style="@style/Widget.Material3.Button.OutlinedButton" android:text="Restaurante" android:textAllCaps="false" android:checked="true"/>
+                <com.google.android.material.button.MaterialButton android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" style="@style/Widget.Material3.Button.OutlinedButton" android:text="Prato" android:textAllCaps="false"/>
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <!-- Nota -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="Sua nota" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center" android:background="@drawable/bg_rating_card" android:padding="20dp" android:layout_marginTop="10dp">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <ImageView android:layout_width="44dp" android:layout_height="44dp" android:src="@drawable/ic_star" app:tint="@color/star_gold" android:padding="2dp"/>
+                    <ImageView android:layout_width="44dp" android:layout_height="44dp" android:src="@drawable/ic_star" app:tint="@color/star_gold" android:padding="2dp"/>
+                    <ImageView android:layout_width="44dp" android:layout_height="44dp" android:src="@drawable/ic_star" app:tint="@color/star_gold" android:padding="2dp"/>
+                    <ImageView android:layout_width="44dp" android:layout_height="44dp" android:src="@drawable/ic_star" app:tint="@color/star_gold" android:padding="2dp"/>
+                    <ImageView android:layout_width="44dp" android:layout_height="44dp" android:src="@drawable/ic_star_border" app:tint="@color/star_gold" android:padding="2dp"/>
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Muito bom!" android:textColor="@color/brand_primary" android:textStyle="bold" android:textSize="16sp"/>
+            </LinearLayout>
+
+            <!-- Comentário -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="Comentário" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
+            <com.google.android.material.textfield.TextInputLayout style="@style/Widget.Diario.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:hint="Conte como foi sua experiência...">
+                <com.google.android.material.textfield.TextInputEditText android:layout_width="match_parent" android:layout_height="120dp" android:gravity="top|start" android:inputType="textMultiLine" android:padding="6dp" android:text="Massa perfeita e atendimento impecável. O nhoque derrete na boca!"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Fotos -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="Fotos (opcional)" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="10dp">
+                <LinearLayout android:layout_width="92dp" android:layout_height="92dp" android:orientation="vertical" android:gravity="center" android:background="@drawable/bg_photo_dashed">
+                    <ImageView android:layout_width="26dp" android:layout_height="26dp" android:src="@drawable/ic_add_photo" app:tint="@color/brand_primary"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Adicionar" android:textColor="@color/brand_primary" android:textSize="12sp"/>
+                </LinearLayout>
+                <com.google.android.material.card.MaterialCardView android:layout_width="92dp" android:layout_height="92dp" android:layout_marginStart="10dp" app:cardCornerRadius="16dp" app:cardElevation="0dp"><ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:src="@drawable/ph_food_1"/></com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView android:layout_width="92dp" android:layout_height="92dp" android:layout_marginStart="10dp" app:cardCornerRadius="16dp" app:cardElevation="0dp"><ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:src="@drawable/ph_food_5"/></com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@color/surface" android:paddingHorizontal="20dp" android:paddingVertical="12dp" android:elevation="10dp">
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnPublicar" style="@style/Widget.Diario.Button" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Publicar avaliação" app:icon="@drawable/ic_check_circle" app:iconGravity="textStart"/>
+    </LinearLayout>
+</LinearLayout>

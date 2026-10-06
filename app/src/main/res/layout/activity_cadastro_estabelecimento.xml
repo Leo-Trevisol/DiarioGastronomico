@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    tools:context=".CadastroEstabelecimentoActivity">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingHorizontal="16dp" android:paddingVertical="14dp">
+        <ImageView android:id="@+id/btnVoltar" android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/bg_circle_soft" android:padding="9dp" android:src="@drawable/ic_arrow_back" app:tint="@color/text_primary" android:contentDescription="Voltar"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="12dp" android:text="Editar estabelecimento" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="20sp"/>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:clipToPadding="false">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingHorizontal="20dp" android:paddingBottom="20dp">
+
+            <!-- Capa -->
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="160dp" app:cardCornerRadius="18dp" app:cardElevation="0dp">
+                <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                    <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:src="@drawable/ph_cover_1"/>
+                    <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="#59000000"/>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:orientation="horizontal" android:gravity="center_vertical" android:background="@drawable/bg_pill_white" android:paddingHorizontal="16dp" android:paddingVertical="9dp">
+                        <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_camera" app:tint="@color/brand_primary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:text="Alterar foto de capa" android:textColor="@color/brand_primary" android:textStyle="bold" android:textSize="14sp"/>
+                    </LinearLayout>
+                </FrameLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/Widget.Diario.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:hint="Nome fantasia" app:startIconDrawable="@drawable/ic_restaurant" app:startIconTint="@color/text_secondary">
+                <com.google.android.material.textfield.TextInputEditText android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Cantina della Nonna"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/Widget.Diario.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:hint="Descrição">
+                <com.google.android.material.textfield.TextInputEditText android:layout_width="match_parent" android:layout_height="100dp" android:gravity="top|start" android:inputType="textMultiLine" android:padding="6dp" android:text="Cantina de família com receitas tradicionais italianas e massas artesanais feitas na hora."/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/Widget.Diario.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:hint="Tipo de culinária" app:startIconDrawable="@drawable/ic_category" app:startIconTint="@color/text_secondary">
+                <com.google.android.material.textfield.TextInputEditText android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Italiana"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/Widget.Diario.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:hint="Endereço" app:startIconDrawable="@drawable/ic_location" app:startIconTint="@color/text_secondary">
+                <com.google.android.material.textfield.TextInputEditText android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Rua Sinimbu, 1450 - Centro"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/Widget.Diario.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:hint="Telefone" app:startIconDrawable="@drawable/ic_phone" app:startIconTint="@color/text_secondary">
+                <com.google.android.material.textfield.TextInputEditText android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="phone" android:text="(54) 3333-1450"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/Widget.Diario.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:hint="Horário de funcionamento" app:startIconDrawable="@drawable/ic_clock" app:startIconTint="@color/text_secondary">
+                <com.google.android.material.textfield.TextInputEditText android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Seg a Sáb · 11h às 23h"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnDesativar" style="@style/Widget.Diario.Button.Text" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="Desativar estabelecimento" android:textColor="@color/danger"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@color/surface" android:paddingHorizontal="20dp" android:paddingVertical="12dp" android:elevation="10dp">
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnSalvar" style="@style/Widget.Diario.Button" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Salvar alterações" app:icon="@drawable/ic_check_circle" app:iconGravity="textStart"/>
+    </LinearLayout>
+</LinearLayout>

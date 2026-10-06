@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Marca (paleta quente gastronômica) -->
+    <color name="brand_primary">#E86A1C</color>
+    <color name="brand_primary_dark">#C2410C</color>
+    <color name="brand_secondary">#8C3B10</color>
+    <color name="accent_amber">#F5A524</color>
+    <color name="star_gold">#F5A524</color>
+
+    <!-- Superfícies / fundo -->
+    <color name="bg">#FFF9F3</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#FBEEE1</color>
+    <color name="surface_soft">#F6E7D6</color>
+
+    <!-- Texto -->
+    <color name="text_primary">#2A1E16</color>
+    <color name="text_secondary">#7C6A5C</color>
+    <color name="text_on_primary">#FFFFFF</color>
+
+    <!-- Apoio -->
+    <color name="outline">#EEDFD0</color>
+    <color name="success">#2E8B57</color>
+    <color name="danger">#C0392B</color>
+    <color name="scrim">#66000000</color>
+</resources>

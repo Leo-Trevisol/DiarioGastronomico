@@ -1,0 +1,8 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient android:startColor="#F6B93B" android:endColor="#B8860B" android:angle="135"/>
+        </shape>
+    </item>
+    <item android:width="46dp" android:height="46dp" android:gravity="center" android:drawable="@drawable/ic_glyph_white"/>
+</layer-list>

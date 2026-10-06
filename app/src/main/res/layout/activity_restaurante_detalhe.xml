@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    tools:context=".RestauranteDetalheActivity">
+
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:clipToPadding="false">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+
+            <FrameLayout android:layout_width="match_parent" android:layout_height="215dp">
+                <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:src="@drawable/ph_cover_1" android:contentDescription="Capa"/>
+                <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/bg_scrim_bottom"/>
+                <ImageView android:id="@+id/btnVoltar" android:layout_width="40dp" android:layout_height="40dp" android:layout_gravity="top|start" android:layout_margin="16dp" android:background="@drawable/bg_circle_scrim" android:padding="9dp" android:src="@drawable/ic_arrow_back" app:tint="@color/white" android:contentDescription="Voltar"/>
+                <ImageView android:layout_width="40dp" android:layout_height="40dp" android:layout_gravity="top|end" android:layout_margin="16dp" android:background="@drawable/bg_circle_scrim" android:padding="9dp" android:src="@drawable/ic_favorite" app:tint="@color/white"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="bottom" android:orientation="vertical" android:paddingHorizontal="20dp" android:paddingBottom="34dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cantina della Nonna" android:textColor="@color/white" android:textStyle="bold" android:textSize="26sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Comida Italiana · Centro" android:textColor="#EBFFFFFF" android:textSize="14sp"/>
+                </LinearLayout>
+            </FrameLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/bg_sheet_top" android:layout_marginTop="-26dp" android:paddingHorizontal="20dp" android:paddingTop="22dp" android:paddingBottom="20dp">
+
+                <!-- Resumo de nota -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:background="@drawable/bg_rating_card" android:padding="16dp">
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4.8" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="34sp"/>
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <ImageView android:layout_width="13dp" android:layout_height="13dp" android:src="@drawable/ic_star" app:tint="@color/star_gold"/>
+                        <ImageView android:layout_width="13dp" android:layout_height="13dp" android:src="@drawable/ic_star" app:tint="@color/star_gold"/>
+                        <ImageView android:layout_width="13dp" android:layout_height="13dp" android:src="@drawable/ic_star" app:tint="@color/star_gold"/>
+                        <ImageView android:layout_width="13dp" android:layout_height="13dp" android:src="@drawable/ic_star" app:tint="@color/star_gold"/>
+                        <ImageView android:layout_width="13dp" android:layout_height="13dp" android:src="@drawable/ic_star" app:tint="@color/star_gold"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View android:layout_width="1dp" android:layout_height="52dp" android:background="@color/outline" android:layout_marginHorizontal="18dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="128 avaliações" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="15sp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Baseado nas experiências da comunidade" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Infos -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="18dp">
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_location" app:tint="@color/brand_primary"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="12dp" android:text="Rua Sinimbu, 1450 · Centro, Caxias do Sul" android:textColor="@color/text_primary" android:textSize="14sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="12dp">
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_phone" app:tint="@color/brand_primary"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="12dp" android:text="(54) 3333-1450" android:textColor="@color/text_primary" android:textSize="14sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="12dp">
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_clock" app:tint="@color/brand_primary"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="12dp" android:text="Seg a Sáb · 11h às 23h" android:textColor="@color/text_primary" android:textSize="14sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/bg_pill_success" android:paddingHorizontal="10dp" android:paddingVertical="4dp" android:text="Aberto" android:textColor="@color/success" android:textStyle="bold" android:textSize="12sp"/>
+                </LinearLayout>
+
+                <!-- Sobre -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:text="Sobre" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="18sp"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Cantina de família com receitas tradicionais italianas, massas artesanais feitas na hora e um ambiente aconchegante no coração da cidade." android:textColor="@color/text_secondary" android:textSize="14sp" android:lineSpacingMultiplier="1.2"/>
+
+                <!-- Fotos -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:text="Fotos" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="18sp"/>
+                <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:scrollbars="none" android:clipToPadding="false">
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <com.google.android.material.card.MaterialCardView android:layout_width="130dp" android:layout_height="100dp" android:layout_marginEnd="10dp" app:cardCornerRadius="16dp" app:cardElevation="0dp"><ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:src="@drawable/ph_food_1"/></com.google.android.material.card.MaterialCardView>
+                        <com.google.android.material.card.MaterialCardView android:layout_width="130dp" android:layout_height="100dp" android:layout_marginEnd="10dp" app:cardCornerRadius="16dp" app:cardElevation="0dp"><ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:src="@drawable/ph_food_4"/></com.google.android.material.card.MaterialCardView>
+                        <com.google.android.material.card.MaterialCardView android:layout_width="130dp" android:layout_height="100dp" android:layout_marginEnd="10dp" app:cardCornerRadius="16dp" app:cardElevation="0dp"><ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:src="@drawable/ph_food_5"/></com.google.android.material.card.MaterialCardView>
+                        <com.google.android.material.card.MaterialCardView android:layout_width="130dp" android:layout_height="100dp" app:cardCornerRadius="16dp" app:cardElevation="0dp"><ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:src="@drawable/ph_food_2"/></com.google.android.material.card.MaterialCardView>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <!-- Cardápio -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginBottom="12dp" android:text="Cardápio" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="18sp"/>
+                <com.google.android.material.card.MaterialCardView style="@style/Widget.Diario.Card" android:id="@+id/prato_ph_food_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:clickable="true" android:focusable="true">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="12dp" android:gravity="center_vertical">
+                        <com.google.android.material.card.MaterialCardView android:layout_width="78dp" android:layout_height="78dp" app:cardCornerRadius="14dp" app:cardElevation="0dp">
+                            <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:src="@drawable/ph_food_1" android:contentDescription="Nhoque ao Sugo"/>
+                        </com.google.android.material.card.MaterialCardView>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Nhoque ao Sugo" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Nhoque de batata artesanal com molho de tomate italiano e manjericão fresco." android:textColor="@color/text_secondary" android:textSize="13sp" android:maxLines="2" android:ellipsize="end"/>
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="6dp">
+                                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="R$ 42,90" android:textColor="@color/brand_primary" android:textStyle="bold" android:textSize="15sp"/>
+                                <ImageView android:layout_width="15dp" android:layout_height="15dp" android:src="@drawable/ic_star" app:tint="@color/star_gold"/>
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="3dp" android:text="4.9" android:textColor="@color/text_primary" android:textSize="13sp" android:textStyle="bold"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView style="@style/Widget.Diario.Card" android:id="@+id/prato_ph_food_4" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:clickable="true" android:focusable="true">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="12dp" android:gravity="center_vertical">
+                        <com.google.android.material.card.MaterialCardView android:layout_width="78dp" android:layout_height="78dp" app:cardCornerRadius="14dp" app:cardElevation="0dp">
+                            <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:src="@drawable/ph_food_4" android:contentDescription="Parmegiana da Casa"/>
+                        </com.google.android.material.card.MaterialCardView>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Parmegiana da Casa" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Filé empanado, molho pomodoro, muçarela gratinada e arroz." android:textColor="@color/text_secondary" android:textSize="13sp" android:maxLines="2" android:ellipsize="end"/>
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="6dp">
+                                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="R$ 58,00" android:textColor="@color/brand_primary" android:textStyle="bold" android:textSize="15sp"/>
+                                <ImageView android:layout_width="15dp" android:layout_height="15dp" android:src="@drawable/ic_star" app:tint="@color/star_gold"/>
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="3dp" android:text="4.7" android:textColor="@color/text_primary" android:textSize="13sp" android:textStyle="bold"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView style="@style/Widget.Diario.Card" android:id="@+id/prato_ph_food_5" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:clickable="true" android:focusable="true">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="12dp" android:gravity="center_vertical">
+                        <com.google.android.material.card.MaterialCardView android:layout_width="78dp" android:layout_height="78dp" app:cardCornerRadius="14dp" app:cardElevation="0dp">
+                            <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:src="@drawable/ph_food_5" android:contentDescription="Risoto de Funghi"/>
+                        </com.google.android.material.card.MaterialCardView>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Risoto de Funghi" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Risoto cremoso com mix de cogumelos e parmesão." android:textColor="@color/text_secondary" android:textSize="13sp" android:maxLines="2" android:ellipsize="end"/>
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="6dp">
+                                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="R$ 49,90" android:textColor="@color/brand_primary" android:textStyle="bold" android:textSize="15sp"/>
+                                <ImageView android:layout_width="15dp" android:layout_height="15dp" android:src="@drawable/ic_star" app:tint="@color/star_gold"/>
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="3dp" android:text="4.8" android:textColor="@color/text_primary" android:textSize="13sp" android:textStyle="bold"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <!-- Avaliações -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="14dp" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Avaliações" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="18sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ver todas" android:textColor="@color/brand_primary" android:textStyle="bold" android:textSize="14sp"/>
+                </LinearLayout>
+                <com.google.android.material.card.MaterialCardView style="@style/Widget.Diario.Card" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                            <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ph_avatar_a" android:contentDescription="Mariana Souza"/>
+                            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="10dp">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mariana Souza" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="15sp"/>
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12 set 2026" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+                            </LinearLayout>
+                            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_star" app:tint="@color/star_gold"/>
+                        <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_star" app:tint="@color/star_gold"/>
+                        <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_star" app:tint="@color/star_gold"/>
+                        <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_star" app:tint="@color/star_gold"/>
+                        <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_star" app:tint="@color/star_gold"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Massa perfeita, atendimento impecável. O nhoque derrete na boca. Já virou meu lugar favorito no centro!" android:textColor="@color/text_primary" android:textSize="14sp" android:lineSpacingMultiplier="1.15"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView style="@style/Widget.Diario.Card" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                            <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ph_avatar_b" android:contentDescription="Rafael Lima"/>
+                            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="10dp">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rafael Lima" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="15sp"/>
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="08 set 2026" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+                            </LinearLayout>
+                            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_star" app:tint="@color/star_gold"/>
+                        <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_star" app:tint="@color/star_gold"/>
+                        <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_star" app:tint="@color/star_gold"/>
+                        <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_star" app:tint="@color/star_gold"/>
+                        <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_star_border" app:tint="@color/star_gold"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Ambiente super aconchegante e porções generosas. Só achei o tempo de espera um pouco longo." android:textColor="@color/text_primary" android:textSize="14sp" android:lineSpacingMultiplier="1.15"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@color/surface" android:paddingHorizontal="20dp" android:paddingVertical="12dp" android:elevation="10dp">
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnAvaliar" style="@style/Widget.Diario.Button" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Avaliar restaurante" app:icon="@drawable/ic_star" app:iconGravity="textStart"/>
+    </LinearLayout>
+</LinearLayout>

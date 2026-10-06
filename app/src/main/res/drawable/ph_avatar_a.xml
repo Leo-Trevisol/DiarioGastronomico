@@ -1,0 +1,8 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <gradient android:startColor="#7FB77E" android:endColor="#2E8B57" android:angle="135"/>
+        </shape>
+    </item>
+    <item android:width="22dp" android:height="22dp" android:gravity="center" android:drawable="@drawable/ic_person_white"/>
+</layer-list>
