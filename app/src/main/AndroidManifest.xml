@@ -20,24 +20,17 @@
             </intent-filter>
         </activity>
 
-        <!-- Autenticação -->
         <activity android:name=".LoginActivity" android:exported="false" />
         <activity android:name=".CadastroActivity" android:exported="false" />
 
-        <!-- Consumidor -->
-        <activity android:name=".ExplorarActivity" android:exported="false" />
+        <activity android:name=".ConsumidorHostActivity" android:exported="false" />
+        <activity android:name=".RestauranteHostActivity" android:exported="false" />
+
         <activity android:name=".RestauranteDetalheActivity" android:exported="false" />
         <activity android:name=".PratoDetalheActivity" android:exported="false" />
         <activity android:name=".AvaliarActivity" android:exported="false" />
-        <activity android:name=".DiarioActivity" android:exported="false" />
-        <activity android:name=".PerfilActivity" android:exported="false" />
-
-        <!-- Restaurante -->
-        <activity android:name=".RestaurantePainelActivity" android:exported="false" />
-        <activity android:name=".GerenciarCardapioActivity" android:exported="false" />
         <activity android:name=".CadastroEstabelecimentoActivity" android:exported="false" />
         <activity android:name=".CadastroPratoActivity" android:exported="false" />
-        <activity android:name=".AvaliacoesRecebidasActivity" android:exported="false" />
 
     </application>
 

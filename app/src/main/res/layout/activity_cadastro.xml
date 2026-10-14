@@ -44,7 +44,6 @@
             android:textColor="@color/text_secondary"
             android:textSize="15sp"/>
 
-        <!-- Seletor de tipo de perfil -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemRoot"
+    style="@style/Widget.Diario.Card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="12dp" android:gravity="center_vertical">
+        <com.google.android.material.card.MaterialCardView android:layout_width="78dp" android:layout_height="78dp" app:cardCornerRadius="14dp" app:cardElevation="0dp">
+            <ImageView android:id="@+id/imgPrato" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:contentDescription="Prato"/>
+        </com.google.android.material.card.MaterialCardView>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+            <TextView android:id="@+id/txtNome" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
+            <TextView android:id="@+id/txtDescricao" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="@color/text_secondary" android:textSize="13sp" android:maxLines="2" android:ellipsize="end"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="6dp">
+                <TextView android:id="@+id/txtPreco" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:textColor="@color/brand_primary" android:textStyle="bold" android:textSize="15sp"/>
+                <ImageView android:layout_width="15dp" android:layout_height="15dp" android:src="@drawable/ic_star" app:tint="@color/star_gold"/>
+                <TextView android:id="@+id/txtNota" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="3dp" android:textColor="@color/text_primary" android:textSize="13sp" android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

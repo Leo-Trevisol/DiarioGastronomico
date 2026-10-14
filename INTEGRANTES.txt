@@ -1,0 +1,8 @@
+Trabalho Prático - Desenvolvimento do Layout das Telas
+Disciplina: Programação Mobile
+Sistema: Diário Gastronômico (Android)
+
+Integrantes do grupo:
+- Gustavo Longo
+- Leonardo Trevisol
+- Viktor Rogalski

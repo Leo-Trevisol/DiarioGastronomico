@@ -28,7 +28,7 @@ public class CadastroActivity extends BaseActivity {
         onClick(R.id.btnVoltar, this::finish);
         onClick(R.id.txtEntrar, this::finish);
         onClick(R.id.btnCadastrar, () ->
-                go(tipoRestaurante ? RestaurantePainelActivity.class : ExplorarActivity.class));
+                go(tipoRestaurante ? RestauranteHostActivity.class : ConsumidorHostActivity.class));
     }
 
     private void selecionar(MaterialCardView ativo, MaterialCardView inativo) {
